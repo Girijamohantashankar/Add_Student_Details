@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap");
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    list-style: none;
+}
+
+body {
+    color: black;
+    line-height: 1.4;
+    font-size: 1rem;
+    font-family: "Poppins", sans-serif;
+    background-color: #ddd;
+}
+
+.wrapper {
+    width: 100%;
+    padding: 2 * 0.5rem;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+.wrapper h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    transition: 0.5s;
+    text-align: center;
+    padding-top: 50px;
+    color: #187d7b;
+    text-shadow: 4px 4px 2px#fff;
+}
+
+.wrapper h2:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+    text-shadow: none;
+}
+
+.block_content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 20px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.form__group {
+    display: grid;
+    gap: 10px;
+}
+
+.form__group label {
+    font-size: 1.2rem;
+    color: #ddd;
+    text-shadow: 1px 1px red;
+
+}
+
+button.btn {
+    padding: 0.25rem 0.75rem;
+    width: 100%;
+    border: 2px solid #54bab9;
+    height: 42px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    color: black;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.btn:hover {
+    background:#54bab9;
+}
+
+.form_input {
+    padding: 0.25rem 0.75rem;
+    width: 100%;
+    border: 1px solid #54bab9;
+    height: 42px;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    color: black;
+}
+
+.form_input::-webkit-input-placeholder {
+    color: black;
+    opacity: 0.9;
+}
+
+.form_input:-ms-input-placeholder {
+    color: black;
+    opacity: 0.9;
+}
+
+.form_input::placeholder {
+    color: black;
+    opacity: 0.9;
+}
+
+.form_input:-webkit-autofill,
+.form_input:-webkit-autofill:hover,
+.form_input:-webkit-autofill:focus {
+    -webkit-text-fill-color: black;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+.block_list {
+    display: grid;
+    gap: 0.5rem;
+    padding: 2 * 0.5rem;
+    padding-left: 3rem;
+    position: relative;
+    background-color: #54bab9;
+    opacity: 0.5;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-radius: 3px;
+}
+
+.block_list .numbering {
+    width: 40px;
+    display: grid;
+    place-items: center;
+    height: 40px;
+    font-size: 1.25rem;
+    position: absolute;
+    font-weight: 600;
+    background-color: #ddd;
+}
+
+span.close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-content: center;
+    border-radius: 50%;
+    right: -10px;
+    top: -10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    rotate: 45deg;
+    transition: 0.5s;
+    background-color: #ddd;
+    color: red;
+    opacity: 1;
+}
+h3 {
+    font-size: 1.25rem;
+}
+
+ul.list {
+    display: grid;
+    gap: 5px;
+}
+
+li {
+    font-size: 0.8rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+label {
+    font-weight: 600;
+}
+
+span {
+    color: #fff;
+    
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.loader {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 10;
+    display: none;
+    gap: 5px;
+    place-items: center;
+}
+
+.loader span {
+    position: absolute;
+    border: 2px solid #54bab9;
+    width: 120px;
+    height: 120px;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    border-radius: 50% 20% / 10% 40%;
+    animation-delay: 0s;
+}
+
+span[b],
+span[d] {
+    animation-direction: reverse;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.back-video {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    
+}
+
+/* Responsive Video Frame */
+
+@media (min-aspect-ratio: 16/9) {
+    .back-video {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    .back-video {
+        width: auto;
+        height: 100%;
+    }
+}
+

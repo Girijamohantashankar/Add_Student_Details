@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+
+    <div class="loader"><span a style="--i:0"></span><span b style="--i:1"></span><span c style="--i:2"></span>
+        <span d style="--i:3"></span>
+    </div>
+
+
+
+    <video autoplay loop muted plays-inline class="back-video">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+
+    <div class="wrapper">
+        <h2 class="heading">Add Student List</h2>
+        <form class="form">
+            <div class="form__group">
+                <label for="name">Name</label>
+                <input type="text" class="form_input" placeholder='Enter your Name' id="name" required />
+            </div>
+            <div class="form__group">
+                <label for="email">Email</label>
+                <input type="email" class="form_input" placeholder='Enter your Email Address' id="email" required />
+            </div>
+            <div class="form__group">
+                <label for="uid">University ID</label>
+                <input type="number" class="form_input" placeholder='Enter your university ID' id="uid" required />
+            </div>
+            <div class="form__group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" class="form_input" id="dob" data-date-format="DD MMMM YYYY" required />
+            </div>
+            <div class="form__group">
+                <label for="designation">Designation</label>
+                <select class="form__select" id="designation" required>
+                    <option value="Frontend Developer">Frontend Developer</option>
+                    <option value="Senior Frontend Developer">Senior Frontend Developer</option>
+                    <option value="Frontend Lead">Frontend Lead</option>
+                    <option value="Full Stack Developer">Full Stack Developer</option>
+                    <option value="Frontend Architect">Frontend Architect</option>
+                    <option value="Solution Architect">Solution Architect</option>
+                </select>
+            </div>
+            <div class="form__group">
+                <label for="exp">Total Experience</label>
+                <input type="number" class="form_input" placeholder='Enter your total experience' id="exp" min="1"
+                    max="15" required />
+            </div>
+            <div class="form__group"><button class="btn" id="insert">Save</button></div>
+        </form>
+        <div class="block_content">
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
